@@ -1,0 +1,7 @@
+# Données locales MariaDB générées par Docker
+/mysql/
+
+# Résultats temporaires générés par Cypress
+/frontend/cypress/screenshots/
+/frontend/cypress/videos/
+/frontend/cypress/downloads/
