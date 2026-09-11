@@ -1,0 +1,25 @@
+{
+  "validUser": {
+    "username": "test2@test.fr",
+    "password": "testtest"
+  },
+  "invalidUser": {
+    "username": "unknown-user@eco-bliss-bath.test",
+    "password": "wrong-password"
+  },
+  "products": {
+    "available": {
+      "id": 6,
+      "name": "Dans la forêt"
+    },
+    "outOfStock": {
+      "id": 3,
+      "name": "Sentiments printaniers"
+    }
+  },
+  "review": {
+    "title": "Test automatisé Cypress",
+    "comment": "Avis créé pendant la campagne de tests automatisés.",
+    "rating": 5
+  }
+}

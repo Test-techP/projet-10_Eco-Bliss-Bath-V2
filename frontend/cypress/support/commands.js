@@ -35,3 +35,24 @@
 //     }
 //   }
 // }
+Cypress.Commands.add("loginByApi", ({ username, password }) => {
+  return cy
+    .request({
+      method: "POST",
+      url: `${Cypress.env("apiUrl")}/login`,
+      body: {
+        username,
+        password,
+      },
+    })
+    .then((response) => {
+      expect(response.status).to.eq(200);
+      const token = response.body.token;
+      const hasValidToken =
+        typeof token === "string" && token.length > 0;
+
+      expect(hasValidToken).to.eq(true);
+
+      return token;
+    });
+});
