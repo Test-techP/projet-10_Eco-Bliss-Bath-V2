@@ -2,7 +2,7 @@ describe("API - POST /login", () => {
   let testData;
 
   before(() => {
-    cy.fixture("test-data").then((data) => {
+    return cy.fixture("test-data").then((data) => {
       testData = data;
     });
   });
@@ -16,14 +16,15 @@ describe("API - POST /login", () => {
     }).then((response) => {
       expect(response.status).to.eq(401);
       expect(response.body.code).to.eq(401);
-      expect(response.body.message).to.eq("Invalid credentials.");
+      expect(response.body.message).to.eq(
+        "Invalid credentials."
+      );
     });
   });
 
   it("connecte un utilisateur avec des identifiants valides", () => {
     cy.loginByApi(testData.validUser).then((token) => {
-      const tokenPartsCount = token.split(".").length;
-      expect(tokenPartsCount).to.eq(3);
+      expect(token.split(".")).to.have.length(3);
     });
   });
 });
