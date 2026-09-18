@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "db:reset:test": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ../scripts/reset-test-database.ps1",
+    "cy:open:reset": "npm run db:reset:test && cypress open",
+    "cy:run:reset": "npm run db:reset:test && cypress run"
   },
   "private": true,
   "dependencies": {

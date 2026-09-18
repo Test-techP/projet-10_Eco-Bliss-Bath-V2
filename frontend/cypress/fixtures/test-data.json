@@ -21,5 +21,12 @@
     "title": "Test automatisé Cypress",
     "comment": "Avis créé pendant la campagne de tests automatisés.",
     "rating": 5
+  },
+  "order": {
+    "firstname": "Test",
+    "lastname": "Automatisation",
+    "address": "1 rue des Tests",
+    "zipCode": "75000",
+    "city": "Paris"
   }
 }
