@@ -1,0 +1,5 @@
+Projet : Automatisez des tests pour une boutique en ligne
+Candidate : Pauline Puga
+
+Dépôt GitHub :
+https://github.com/Test-techP/projet-10_Eco-Bliss-Bath-V2
