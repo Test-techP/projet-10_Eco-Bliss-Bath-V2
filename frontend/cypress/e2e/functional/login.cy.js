@@ -28,7 +28,7 @@ describe("Fonctionnalité - connexion utilisateur", () => {
 
     cy.wait("@invalidLogin")
       .its("response.statusCode")
-      .should("eq", 401);
+      .should("eq", 403);
 
     cy.get('[data-cy="login-errors"]')
       .should("be.visible")
